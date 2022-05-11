@@ -4,7 +4,7 @@ import Logo from '../../assets/unblogo.png'
 const Header = () => {
     return(
         <Container>
-            <img src={Logo}/>
+            <img src={Logo} alt="logo da unb"/>
         </Container>
     )
 }

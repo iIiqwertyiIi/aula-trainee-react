@@ -5,7 +5,6 @@ import './global.css'
 import {useState} from 'react'
 
 function App() {
-  let a = 0
   const [number, setNumber] = useState(0)
   const [students, setStudents] = useState([])
   const addStudents = (input) => {
