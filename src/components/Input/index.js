@@ -1,14 +1,11 @@
-import { useState } from "react"
 import { Container } from "./styles"
 
-const Input = ({addFunction, placeholder}) => {
-    const [input, setInput] = useState()
+const Input = ({onChangeFunction, placeholder, ...props}) => {
     return (
         <Container>
-            <input onChange={setInput} type="text" placeholder={placeholder}/>
-            <button onClick={() => addFunction(input.target.value)}>Adicionar</button>
+            <input onChange={e => onChangeFunction(e.target.value)} placeholder={placeholder} {...props}/>
         </Container>
     )
 }
 
-export default Input
+export default Input;

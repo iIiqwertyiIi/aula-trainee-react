@@ -10,9 +10,18 @@ export const Container = styled.div`
 
     input {
         flex: 1;
-        border-radius: 1rem;
+        border-radius: 1.875rem 0 0 1.875rem;
         border: solid 2px #1D307B;
         font-size: 1.875rem;
         padding: 0 2.625rem;
+    }
+
+    button {
+        width: 25.375rem;
+        border: none;
+        border-radius: 0 1.875rem 1.875rem 0;
+        background-color: #1D307B;
+        color: #fff;
+        font-size: 1.875rem;
     }
 `

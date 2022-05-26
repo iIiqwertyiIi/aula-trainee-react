@@ -1,5 +1,5 @@
 import Disciplines from '../../components/Disciplines/index.js';
-import Input from '../../components/Input/index.js';
+import AddContainer from '../../components/AddContainer/index.js';
 import { useState, useEffect } from 'react'
 import { api } from '../../services/api.js';
 
@@ -55,7 +55,7 @@ const DisciplinesPage = () => {
 
     return (
         <>
-            <Input placeholder="Nova Disciplina" addFunction={addDisciplines}/>
+            <AddContainer placeholder="Nova Disciplina" addFunction={addDisciplines}/>
             <Disciplines disciplines={disciplines} />
         </>
     )

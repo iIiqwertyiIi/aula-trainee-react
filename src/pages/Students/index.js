@@ -1,5 +1,5 @@
 import Students from '../../components/Students/index.js';
-import Input from '../../components/Input'
+import AddContainer from '../../components/AddContainer'
 import { useState } from 'react';
 
 const StudentsPage = () => {
@@ -13,7 +13,7 @@ const StudentsPage = () => {
             <h1>{number}</h1>
             <button onClick={() => setNumber(number + 1)}>Incrementar</button>
             <button onClick={() => console.log(number)}>Imprimir</button>
-            <Input addFunction={addStudents}/>
+            <AddContainer addFunction={addStudents}/>
             <Students students={students}/>
         </>
     )
