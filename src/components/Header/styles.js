@@ -9,6 +9,7 @@ export const Container = styled.header`
     font-size: 1.5rem;
     justify-content: space-between;
     padding-right: 20rem;
+    color: white;
 
     a {color: white}
 

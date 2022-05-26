@@ -2,10 +2,11 @@ import Disciplines from '../../components/Disciplines/index.js';
 import AddContainer from '../../components/AddContainer/index.js';
 import { useState, useEffect } from 'react'
 import { api } from '../../services/api.js';
-
+import { useUserContext } from '../../context/useUserContext.js';
 
 const DisciplinesPage = () => {
     const [disciplines, setDisciplines] = useState([])
+    const {user} = useUserContext();
     
     // const getDisciplines = async () => {
     //   const response = await api.get('/disciplines/index');
@@ -55,7 +56,7 @@ const DisciplinesPage = () => {
 
     return (
         <>
-            <AddContainer placeholder="Nova Disciplina" addFunction={addDisciplines}/>
+            {!!user && <AddContainer placeholder="Nova Disciplina" addFunction={addDisciplines}/>}
             <Disciplines disciplines={disciplines} />
         </>
     )
